@@ -12,8 +12,8 @@ import styles from './styles.css';
 const App = (): React.Element<any> =>
   (<div className={styles.wrapper}>
     <Helmet
-      titleTemplate="Texas Camp 2018 - %s"
-      defaultTitle="Texas Camp 2018"
+      titleTemplate="Texas Camp 2019 - %s"
+      defaultTitle="Texas Camp 2019"
     />
     <Typekit kitId="yde7xbz" />
     <Switch>

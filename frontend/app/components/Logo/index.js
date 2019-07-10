@@ -5,7 +5,7 @@ import logo from '../../shared/images/texas-camp-logo.png';
 function Logo() {
   return (
     <div className={styles.logo}>
-      <img src={logo} alt="Texas Camp 2018" />
+      <img src={logo} alt="Texas Camp 2019" />
     </div>
   );
 }

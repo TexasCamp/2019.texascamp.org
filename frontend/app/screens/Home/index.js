@@ -20,7 +20,7 @@ import safariPinnedTab from 'favicons/safari-pinned-tab.svg';
 const Home = (): React.Element<any> =>
   (<div className={styles.wrapper}>
     <Helmet>
-      <title>Texas Camp 2018</title>
+      <title>Texas Camp 2019</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#ef5a47" />
