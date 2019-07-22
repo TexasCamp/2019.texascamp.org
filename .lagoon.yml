@@ -1,6 +1,6 @@
 docker-compose-yaml: docker-compose.yml
 
-project: 2018-texascamp
+project: 2019-texascamp
 
 tasks:
   post-rollout:
@@ -21,9 +21,9 @@ environments:
   prod:
     routes:
       - varnish:
-        - backend2018.texascamp.org
+        - backend2019.texascamp.org
       - frontend:
-        - 2018.texascamp.org
+        - 2019.texascamp.org
     cronjobs:
       - name: drush cron
         schedule: "H/15 * * * *"

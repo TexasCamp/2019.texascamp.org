@@ -156,4 +156,4 @@ if (file_exists(__DIR__ . '/settings.local.php')) {
 // Last: This server specific services file.
 if (file_exists(__DIR__ . '/services.local.yml')) {
   $settings['container_yamls'][] = __DIR__ . '/services.local.yml';
-}
+}$settings['install_profile'] = 'config_installer';
