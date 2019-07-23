@@ -3,7 +3,7 @@
 
 export {
   default as prospectus,
-} from '!file-loader?name=TexasCamp_2018_Sponsor_Prospectus_[hash].[ext]!documents/prospectus.pdf';
+} from '!file-loader?name=TexasCamp_2019_Sponsor_Prospectus_[hash].[ext]!documents/prospectus.pdf';
 export {
   default as favicon,
 } from '!file-loader?name=favicon.ico!favicons/favicon.ico';

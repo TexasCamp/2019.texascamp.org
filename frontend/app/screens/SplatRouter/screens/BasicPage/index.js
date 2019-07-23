@@ -21,7 +21,7 @@ const BasicPage = ({ title, body }: BasicPageProps): React.Element<any> => {
   formattedBody = formattedBody
     ? formattedBody.replace(
         'src="/sites/default/files/inline-images/',
-        'src="https://backend2018.texascamp.org/sites/default/files/inline-images/',
+        'src="https://backend2019.texascamp.org/sites/default/files/inline-images/',
       )
     : '';
   let backgroundImage;

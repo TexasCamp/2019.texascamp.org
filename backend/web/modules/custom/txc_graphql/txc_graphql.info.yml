@@ -1,6 +1,6 @@
 name: Custom GraphQL
 type: module
-description: GraphQL extensions for 2018.texascamp.org
+description: GraphQL extensions for 2019.texascamp.org
 core: 8.x
 package: Custom
 dependencies:

@@ -17,7 +17,7 @@ import styles from './styles.css';
 const Home = (): React.Element<any> =>
   (<div className={styles.main}>
     <Helmet>
-      <title>Texas Camp 2018</title>
+      <title>Texas Camp 2019</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#ef5a47" />

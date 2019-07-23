@@ -29,8 +29,8 @@ import '../../shared/css/global.css';
 const App = (): React.Element<any> =>
   (<div>
     <Helmet
-      titleTemplate="Texas Camp 2018 - %s"
-      defaultTitle="Texas Camp 2018"
+      titleTemplate="Texas Camp 2019 - %s"
+      defaultTitle="Texas Camp 2019"
     />
     <Helmet>
       <meta charSet="utf-8" />

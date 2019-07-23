@@ -16,11 +16,11 @@ const Footer = ({ loading, sponsors }): React.Element<any> | null =>
       <img src={logo} alt="Texas Camp" className={styles.logo} />
       <div className={styles.info}>
         <div>
-          May 31-June 2, 2018<span className={styles.separator}>
+          Oct 18-19, 2019<span className={styles.separator}>
             &nbsp;&nbsp;&middot;&nbsp;&nbsp;
-          </span>Austin, TX
+          </span>San Antonio, TX
         </div>
-        <div className={styles.venue}>Norris Conference Center</div>
+        <div className={styles.venue}>CodeUp</div>
         <div className={styles.socialWrapper}>
           <span className={styles.social}>
             <Twitter />

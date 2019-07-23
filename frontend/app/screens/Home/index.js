@@ -53,7 +53,7 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
     !loading &&
     <div className={styles.wrapper}>
       <Helmet>
-        <title>Texas Camp 2018</title>
+        <title>Texas Camp 2019</title>
       </Helmet>
       <Menu />
       <div className={styles.contentWrapper}>

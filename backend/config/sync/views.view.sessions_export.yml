@@ -982,7 +982,7 @@ display:
               alias: ''
               raw_output: false
       path: sessions-csv
-      filename: 2018.texascamp.sessions.csv
+      filename: 2019.texascamp.sessions.csv
       auth: {  }
       pager:
         type: none

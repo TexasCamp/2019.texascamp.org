@@ -24,7 +24,7 @@ const SessionIndividual = ({ session }: { session: SessionT }) => {
   formattedBody = formattedBody
     ? formattedBody.replace(
         'src="/sites/default/files/inline-images/',
-        'src="https://backend2018.texascamp.org/sites/default/files/inline-images/',
+        'src="https://backend2019.texascamp.org/sites/default/files/inline-images/',
       )
     : '';
   return (
