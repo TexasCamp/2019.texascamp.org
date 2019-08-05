@@ -8,7 +8,6 @@
   }  
 }
 .prospectus {
-  visibility: hidden;
   composes: calderDark from '../../shared/css/fonts.css';
   font-size: 17px;
   line-height: 1.5rem;

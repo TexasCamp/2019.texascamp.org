@@ -7,7 +7,7 @@ import Logo from 'Logo';
 import NewsletterForm from 'NewsletterForm';
 import BackgroundImage from 'BackgroundImage';
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import prospectus from '!file-loader?name=TexasCamp_2018_Sponsor_Prospectus_[hash].[ext]!documents/prospectus.pdf';
+import prospectus from '!file-loader?name=TexasCamp_2019_Sponsor_Prospectus_[hash].[ext]!documents/prospectus.pdf';
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import favicon from '!file-loader?name=favicon.ico!favicons/favicon.ico';
 import download from 'images/download.png';
