@@ -6,11 +6,11 @@ import styles from './styles.css';
 function Header() {
   return (
     <section className={styles.info}>
-      <span className={styles.date}>May 31-June 2, 2018</span>
+      <span className={styles.date}>Oct 18-19, 2019</span>
       <span className={styles.separator}>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
-      <span className={styles.location}>Austin TX</span>
+      <span className={styles.location}>San Antonio TX</span>
       <span className={styles.separator}>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
-      <span className={styles.venue}>Norris Conference Center</span>
+      <span className={styles.venue}>Codeup</span>
       <span className={styles.separator}>&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
       <span className={styles.social}>
         <Twitter />
