@@ -7,8 +7,6 @@ import Logo from 'Logo';
 import NewsletterForm from 'NewsletterForm';
 import BackgroundImage from 'BackgroundImage';
 // eslint-disable-next-line import/no-webpack-loader-syntax
-import prospectus from '!file-loader?name=TexasCamp_2019_Sponsor_Prospectus_[hash].[ext]!documents/prospectus.pdf';
-// eslint-disable-next-line import/no-webpack-loader-syntax
 import favicon from '!file-loader?name=favicon.ico!favicons/favicon.ico';
 import download from 'images/download.png';
 import styles from 'Home/styles.css';
@@ -35,7 +33,7 @@ const Home = (): React.Element<any> =>
     <Logo />
     <NewsletterForm />
     <div className={styles.prospectus}>
-      <a href={prospectus}>
+      <a href="https://drive.google.com/file/d/1OOjPe_s9dpKRE9MYtiXIDKz_Sq8p2wAQ/view">
         <img src={download} alt="Download the Sponsor Prospectus" />
         Sponsor Prospectus
         <div className={styles.border} />
