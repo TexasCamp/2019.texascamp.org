@@ -36,8 +36,26 @@ export const SPONSOR_QUERY = gql`
   }
 `;
 
-export const sponsorsListMapper = (entities: Array<Object>): Array<SponsorT> =>
-  entities.map(entity => ({
+const emptySponsor = {
+  id: 'empty-sponsor',
+  title: 'We Need You!',
+  body: 'We Need You!',
+  sponsorLevel: 'Platinum',
+  image: {
+    url: 'http://placekitten.com/421/240',
+    alt: 'We Need You!',
+  },
+  sponsorUrl: '/sponsors',
+};
+
+export const sponsorsListMapper = (
+  entities: Array<Object>,
+): Array<SponsorT> => {
+  if (entities.length < 1) {
+    return [emptySponsor];
+  }
+
+  return entities.map(entity => ({
     id: entity.entityId,
     title: entity.title,
     body: entity.body.value,
@@ -48,6 +66,7 @@ export const sponsorsListMapper = (entities: Array<Object>): Array<SponsorT> =>
     },
     sponsorUrl: path(['fieldSponsorUrl', 'uri'], entity),
   }));
+};
 
 const withSponsorsQuery = graphql(SPONSOR_QUERY, {
   props: ({
