@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import Header from 'Header';
 import Logo from 'Logo';
 import BackgroundImage from 'BackgroundImage';
-import { prospectus, favicon } from 'files';
+import { favicon } from 'files';
 import download from 'images/download.png';
 import appleTouchIcon from 'favicons/apple-touch-icon.png';
 import favicon32x32 from 'favicons/favicon-32x32.png';
@@ -33,7 +33,7 @@ const Home = (): React.Element<any> =>
       <Logo />
       <NewsletterForm />
       <div className={styles.prospectus}>
-        <a href={prospectus}>
+        <a href="https://drive.google.com/file/d/1OOjPe_s9dpKRE9MYtiXIDKz_Sq8p2wAQ/view">
           <img src={download} alt="Download the Sponsor Prospectus" />
           Sponsor Prospectus
           <div className={styles.border} />

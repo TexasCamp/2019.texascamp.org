@@ -39,8 +39,7 @@
     filter: grayscale(100%) brightness(240%);
     -webkit-filter: grayscale(100%) brightness(240%);
     margin: 20px 10px;
-    transform: scale(1.65);
-    width: 100px;
+    max-width: 160px;
   }
 }
 .credits {

@@ -13,7 +13,7 @@ import withNewsQuery from 'NewsOverview/withNewsQuery';
 import SponsorsSlideshow from 'SponsorsSlideshow';
 import withSponsorsQuery from 'Sponsors/withSponsorsQuery';
 import styles from 'Home/styles.css';
-import price from '../../shared/images/regular-price.png';
+import price from '../../shared/images/price.png';
 import sponsorsHeading from '../../shared/images/sponsors-heading.png';
 
 const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
@@ -62,17 +62,18 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
           <div className={styles.detail}>
             <div className={styles.column}>
               <div className={`${styles.tickets} ${styles.box}`}>
-                <div className={styles.smallest}>- Admission -</div>
+                <div className={styles.smallest}>- Early Nerd -</div>
                 <h3>Tickets</h3>
                 <img src={price} alt="$50 USD" />
                 <a
-                  href="https://www.eventbrite.com/e/texas-camp-2018-tickets-42911508477"
+                  href="https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.button}
                 >
                   Register
                 </a>
+                <div className={styles.verticalText}>Regularly $75</div>
               </div>
               <MediaQuery query="(max-width: 667px)">
                 <div className={styles.latestNews}>
@@ -103,19 +104,17 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
                 </div>
               </MediaQuery>
               <div className={`${styles.speak} ${styles.box}`}>
-                <h4>Sessions</h4>
-                <p>
-                  {"Gain experience and learn from our speaker's expertise."}
-                </p>
-                <Link to="/schedule" className={styles.button}>
-                  Schedule
+                <h4>Speak</h4>
+                <p>Gain experience and open source your expertise.</p>
+                <Link to="/submit-session" className={styles.button}>
+                  Submit
                 </Link>
               </div>
               <div className={`${styles.training} ${styles.box}`}>
-                <h4>Training / $25</h4>
+                <h4>Training / $75</h4>
                 <p>Learn from the best Drupalers this side of the Pecos.</p>
                 <a
-                  href="https://www.eventbrite.com/e/texas-camp-2018-tickets-42911508477"
+                  href="https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.button}
