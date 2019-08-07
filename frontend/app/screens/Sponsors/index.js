@@ -10,7 +10,6 @@ import withSponsorsQuery from 'Sponsors/withSponsorsQuery';
 import styles from 'Sponsors/styles.css';
 import type { SponsorT, SponsorLevelT } from 'types';
 import uniq from 'ramda/src/uniq';
-import { prospectus } from 'files';
 
 type SponsorsPropsT = {
   loading: boolean,
@@ -55,7 +54,10 @@ const Sponsors = ({
               <div className={styles.field}>
                 <div className={styles.fieldLabel}>Sponsor</div>
                 <p>Download our sponsor prospectus to get started.</p>
-                <a href={prospectus} className={styles.button}>
+                <a
+                  href="https://drive.google.com/file/d/1OOjPe_s9dpKRE9MYtiXIDKz_Sq8p2wAQ/view"
+                  className={styles.button}
+                >
                   Download
                 </a>
               </div>
