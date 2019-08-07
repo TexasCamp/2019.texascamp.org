@@ -104,12 +104,10 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
                 </div>
               </MediaQuery>
               <div className={`${styles.speak} ${styles.box}`}>
-                <h4>Sessions</h4>
-                <p>
-                  {"Gain experience and learn from our speaker's expertise."}
-                </p>
-                <Link to="/schedule" className={styles.button}>
-                  Schedule
+                <h4>Speak</h4>
+                <p>Gain experience and open source your expertise.</p>
+                <Link to="/submit-session" className={styles.button}>
+                  Submit
                 </Link>
               </div>
               <div className={`${styles.training} ${styles.box}`}>
