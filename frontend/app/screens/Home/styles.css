@@ -115,7 +115,6 @@
     padding-right: 0;
   }
   .slider {
-    margin-bottom: 8px;
     position: relative;
     :global .slick-track {
       display: inline-flex;
@@ -129,8 +128,8 @@
             vertical-align: middle;
           }
           img {
-            max-width: 180px;
-            transform: scale(1.65);
+            margin: 0;
+            max-width: 300px;
             vertical-align: middle;                
           }
         }
