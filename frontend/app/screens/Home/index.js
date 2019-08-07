@@ -111,10 +111,10 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
                 </Link>
               </div>
               <div className={`${styles.training} ${styles.box}`}>
-                <h4>Training / $25</h4>
+                <h4>Training / $75</h4>
                 <p>Learn from the best Drupalers this side of the Pecos.</p>
                 <a
-                  href="https://www.eventbrite.com/e/texas-camp-2018-tickets-42911508477"
+                  href="https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.button}
