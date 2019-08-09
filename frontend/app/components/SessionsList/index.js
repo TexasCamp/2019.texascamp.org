@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import type { SessionT } from 'types';
-import Link from 'AsyncLink';
+import { Link } from 'react-router-dom';
 import { cleanHtml } from 'utils';
 import styles from 'Sessions/Proposed/styles.css';
 import withLogic from './logic';

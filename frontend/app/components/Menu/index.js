@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import Link from 'AsyncLink';
+import { Link } from 'react-router-dom';
 import NewsletterForm from 'NewsletterForm';
 import withLogic from 'Menu/logic';
 import type { MenuItemT } from 'types';
