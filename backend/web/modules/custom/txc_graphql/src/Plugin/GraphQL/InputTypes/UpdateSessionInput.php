@@ -14,6 +14,7 @@ use Drupal\graphql\Plugin\GraphQL\InputTypes\InputTypePluginBase;
  *   fields = {
  *     "title" = "String",
  *     "track_id" = "Int",
+ *     "session_type_id" = "Int",
  *     "skill_level_id" = "Int",
  *     "speakers" = {
  *       "type" = "SessionSpeakerInput",

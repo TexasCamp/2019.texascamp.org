@@ -22,6 +22,7 @@ export default graphql(createSession, {
   props: ({ mutate }) => ({
     createSession: (
       title,
+      type,
       skillLevel,
       trackId,
       speakers,
@@ -34,6 +35,7 @@ export default graphql(createSession, {
         variables: {
           input: {
             title,
+            session_type_id: parseInt(type, 10),
             skill_level_id: parseInt(skillLevel, 10),
             track_id: parseInt(trackId, 10),
             speakers,

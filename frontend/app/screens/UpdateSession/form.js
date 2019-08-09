@@ -5,6 +5,7 @@ import ReactSelect from 'react-select';
 import styles from './styles.css';
 
 const SessionForm = ({
+  types,
   tracks,
   skillLevels,
   formValues,
@@ -33,6 +34,33 @@ const SessionForm = ({
             required
             placeholder="Title"
           />
+        </div>
+        <div className={styles.formItem}>
+          <div className={styles.fauxFloatingLabelContainer}>
+            <ReactSelect
+              aria-labelledby="type"
+              placeholder=""
+              name="select-type"
+              value={formValues.type}
+              onChange={newOption => {
+                setFormValue('type', newOption.value);
+              }}
+              options={types.map(type => ({
+                value: type.id,
+                label: type.name,
+              }))}
+              required
+            />
+            <label
+              id="type"
+              className={
+                formValues.type ? styles.selectHasValue : styles.selectEmpty
+              }
+              htmlFor="type"
+            >
+              Type
+            </label>
+          </div>
         </div>
         <div className={styles.formItem}>
           <div className={styles.fauxFloatingLabelContainer}>

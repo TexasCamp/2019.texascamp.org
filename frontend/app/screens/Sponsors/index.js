@@ -10,6 +10,7 @@ import withSponsorsQuery from 'Sponsors/withSponsorsQuery';
 import styles from 'Sponsors/styles.css';
 import type { SponsorT, SponsorLevelT } from 'types';
 import uniq from 'ramda/src/uniq';
+import pick from 'ramda/src/pick';
 
 type SponsorsPropsT = {
   loading: boolean,
@@ -30,16 +31,10 @@ const Sponsors = ({
 
   // get list of sorted sponsor levels, with 'individual' omitted
   const levels: SponsorLevelT[] = uniq(
-    companySponsors.map(({ sponsorLevel }) => sponsorLevel),
-  ).sort((a, b) => {
-    const ranks = {
-      Platinum: 1,
-      Gold: 2,
-      Silver: 3,
-      Bronze: 4,
-    };
-    return ranks[a] - ranks[b];
-  });
+    companySponsors.map(sponsor =>
+      pick(['sponsorLevel', 'sponsorWeight'], sponsor),
+    ),
+  ).sort((a, b) => a.sponsorWeight - b.sponsorWeight);
   return (
     !loading &&
     <div>
@@ -108,13 +103,13 @@ const Sponsors = ({
                 brand to the Texas Drupal community.
               </p>
               <div className={styles.sponsorContainer}>
-                {levels.map(eachLevel =>
-                  (<div key={eachLevel}>
+                {levels.map(({ sponsorLevel }) =>
+                  (<div key={sponsorLevel}>
                     <h2>
-                      {eachLevel} sponsors
+                      {sponsorLevel} sponsors
                     </h2>
                     <div className={styles.sponsors}>
-                      {filterByCompanySponsor(eachLevel).map(sponsor =>
+                      {filterByCompanySponsor(sponsorLevel).map(sponsor =>
                         <Sponsor key={sponsor.id} sponsor={sponsor} />,
                       )}
                     </div>

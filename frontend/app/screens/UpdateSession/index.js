@@ -6,7 +6,7 @@ import Header from 'Header';
 import Menu from 'Menu';
 import Footer from 'Footer';
 import SessionForm from 'UpdateSession/form';
-import withTermData from 'UpdateSession/withTermData';
+import withTermData from 'SubmitSession/withTermData';
 import withSessionData from 'UpdateSession/withSessionData';
 import withSessionMutation from 'UpdateSession/withSessionMutation';
 import withLogic from 'UpdateSession/logic';
@@ -14,6 +14,7 @@ import compose from 'recompose/compose';
 import styles from './styles.css';
 
 const UpdateSession = ({
+  types,
   tracks,
   skillLevels,
   formValues,
@@ -47,6 +48,7 @@ const UpdateSession = ({
             {!fetchingSession &&
               session &&
               <SessionForm
+                types={types}
                 tracks={tracks}
                 skillLevels={skillLevels}
                 formValues={formValues}

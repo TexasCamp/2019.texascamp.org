@@ -24,6 +24,7 @@ export const SPONSOR_QUERY = gql`
     fieldSponsorLevel {
       entity {
         entityLabel
+        weight
       }
     }
     fieldSponsorUrl {
@@ -36,37 +37,19 @@ export const SPONSOR_QUERY = gql`
   }
 `;
 
-const emptySponsor = {
-  id: 'empty-sponsor',
-  title: 'We Need You!',
-  body: 'We Need You!',
-  sponsorLevel: 'Platinum',
-  image: {
-    url: 'http://placekitten.com/421/240',
-    alt: 'We Need You!',
-  },
-  sponsorUrl: '/sponsors',
-};
-
-export const sponsorsListMapper = (
-  entities: Array<Object>,
-): Array<SponsorT> => {
-  if (entities.length < 1) {
-    return [emptySponsor];
-  }
-
-  return entities.map(entity => ({
+export const sponsorsListMapper = (entities: Array<Object>): Array<SponsorT> =>
+  entities.map(entity => ({
     id: entity.entityId,
     title: entity.title,
     body: entity.body.value,
     sponsorLevel: path(['fieldSponsorLevel', 'entity', 'entityLabel'], entity),
+    sponsorWeight: path(['fieldSponsorLevel', 'entity', 'weight'], entity),
     image: {
       url: path(['fieldSponsorImage', 'url'], entity),
       alt: path(['fieldSponsorImage', 'alt'], entity),
     },
     sponsorUrl: path(['fieldSponsorUrl', 'uri'], entity),
   }));
-};
 
 const withSponsorsQuery = graphql(SPONSOR_QUERY, {
   props: ({
