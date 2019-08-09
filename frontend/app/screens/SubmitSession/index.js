@@ -14,6 +14,7 @@ import compose from 'recompose/compose';
 import styles from './styles.css';
 
 const SubmitSession = ({
+  types,
   tracks,
   skillLevels,
   formValues,
@@ -65,6 +66,7 @@ const SubmitSession = ({
                   </a>
                 </p>
                 <SessionForm
+                  types={types}
                   tracks={tracks}
                   skillLevels={skillLevels}
                   formValues={formValues}

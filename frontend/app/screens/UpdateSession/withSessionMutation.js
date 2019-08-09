@@ -30,6 +30,7 @@ export default graphql(updateSession, {
       title,
       skillLevel,
       trackId,
+      type,
       speakers,
       description,
       name,
@@ -44,6 +45,7 @@ export default graphql(updateSession, {
             title,
             skill_level_id: parseInt(skillLevel, 10),
             track_id: parseInt(trackId, 10),
+            session_type_id: parseInt(type, 10),
             speakers,
             description,
             contact_info: {
