@@ -24,6 +24,7 @@ export const SPONSOR_QUERY = gql`
     fieldSponsorLevel {
       entity {
         entityLabel
+        weight
       }
     }
     fieldSponsorUrl {
@@ -41,6 +42,7 @@ const emptySponsor = {
   title: 'We Need You!',
   body: 'We Need You!',
   sponsorLevel: 'Platinum',
+  sponsorWeight: 0,
   image: {
     url: 'http://placekitten.com/421/240',
     alt: 'We Need You!',
@@ -60,6 +62,7 @@ export const sponsorsListMapper = (
     title: entity.title,
     body: entity.body.value,
     sponsorLevel: path(['fieldSponsorLevel', 'entity', 'entityLabel'], entity),
+    sponsorWeight: path(['fieldSponsorLevel', 'entity', 'weight'], entity),
     image: {
       url: path(['fieldSponsorImage', 'url'], entity),
       alt: path(['fieldSponsorImage', 'alt'], entity),
