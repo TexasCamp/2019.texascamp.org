@@ -5,12 +5,12 @@ project: 2019-texascamp
 tasks:
   post-rollout:
     - run:
-        name: drush cim
-        command: cd web && drush -y cim
-        service: cli
-    - run:
         name: drush updb
         command: cd web && drush -y updb --cache-clear=0
+        service: cli
+    - run:
+        name: drush cim
+        command: cd web && drush -y cim
         service: cli
     - run:
         name: drush cr
