@@ -32,6 +32,11 @@ const getSingleSession = gql`
             entityId
           }
         }
+        fieldSessionType {
+          entity {
+            entityId
+          }
+        }
         title
       }
     }

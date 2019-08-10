@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'AsyncLink';
+import { Link } from 'react-router-dom';
 import Header from 'Header';
 import Menu from 'Menu';
 import Footer from 'Footer';

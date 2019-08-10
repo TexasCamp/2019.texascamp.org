@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import Link from 'AsyncLink';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 import styles from './styles.css';
 import withLogic from './logic';

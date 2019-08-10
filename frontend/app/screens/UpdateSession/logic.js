@@ -8,6 +8,7 @@ import compose from 'recompose/compose';
 const getInitialFormValues = speakerCount => {
   const initialFormValues = {
     title: '',
+    type: '',
     track: '',
     skillLevel: '',
     desc: '',
@@ -27,6 +28,7 @@ const getInitialFormValues = speakerCount => {
 const getSessionFormValues = session => {
   const initialFormValues = {
     title: session.title,
+    type: parseInt(session.fieldSessionType.entity.entityId, 10),
     track: parseInt(session.fieldSessionTrack.entity.entityId, 10),
     skillLevel: parseInt(session.fieldSessionSkillLevel.entity.entityId, 10),
     desc: session.body.value,
@@ -132,6 +134,7 @@ const withSubmitForm = withHandlers({
       formValues.title,
       formValues.skillLevel,
       formValues.track,
+      formValues.type,
       speakers,
       formValues.desc,
       formValues.name,

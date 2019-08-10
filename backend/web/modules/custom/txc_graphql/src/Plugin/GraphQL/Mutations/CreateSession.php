@@ -67,6 +67,7 @@ class CreateSession extends CreateEntityBase {
       'field_session_skill_level' => $inputArgs['skill_level_id'],
       'field_session_presenters' => $speakers,
       'field_session_track' => $inputArgs['track_id'],
+      'field_session_type' => $inputArgs['session_type_id'],
       'field_session_contact_email' => $inputArgs['contact_info']['email'],
       'field_session_contact_name' => $inputArgs['contact_info']['name'],
       'field_session_contact_company' => $inputArgs['contact_info']['company'],

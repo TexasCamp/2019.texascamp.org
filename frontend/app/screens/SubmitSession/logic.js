@@ -6,6 +6,7 @@ import compose from 'recompose/compose';
 
 const getInitialFormValues = speakerCount => {
   const initialFormValues = {
+    type: '',
     title: '',
     track: '',
     skillLevel: '',
@@ -108,6 +109,7 @@ const withSubmitForm = withHandlers({
 
     createSession(
       formValues.title,
+      formValues.type,
       formValues.skillLevel,
       formValues.track,
       speakers,

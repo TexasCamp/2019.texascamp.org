@@ -5,6 +5,7 @@ import 'App/normalize.css';
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Switch, Route } from 'react-router';
+import SplashPage from 'SplashPage';
 import Home from 'Home';
 import Sessions from 'Sessions';
 import ProposedSessions from 'Sessions/Proposed';
@@ -43,26 +44,60 @@ const App = (): React.Element<any> =>
       <link rel="shortcut icon" href={favicon} />
     </Helmet>
     <Typekit kitId="rgi7wxl" />
-    <div className={styles.wrapper}>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/schedule" component={Sessions} />
-        <Route exact path="/sessions/proposed" component={ProposedSessions} />
-        <Route exact path="/sessions/:sessionName/" component={Session} />
-        <Route exact path="/session-form" component={SubmitSession} />
-        <Route exact path="/happenings/:happeningName/" component={Happening} />
-        <Route
-          exact
-          path="/session-update/:id/:editToken"
-          component={UpdateSession}
-        />
-        <Route exact path={Humans} />
-        <Route exact path="/news" component={NewsOverview} />
-        <Route exact path="/news/:newsTitle/" component={News} />
-        <Route exact path="/sponsors" component={Sponsors} />
-        <Route path="*" component={SplatRouter} />
-      </Switch>
-    </div>
+    <Switch>
+      <Route exact path="/" component={SplashPage} />
+      <Route
+        path={['/sponsor', '/sponsors']}
+        render={() => {
+          if (global.window) {
+            global.window.location.replace(
+              'https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets',
+            );
+          }
+
+          return (
+            <div>
+              Redirecting to{' '}
+              <a href="https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets">
+                https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets
+              </a>
+            </div>
+          );
+        }}
+      />
+      <Route
+        path="*"
+        render={() =>
+          (<div className={styles.wrapper}>
+            <Switch>
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/schedule" component={Sessions} />
+              <Route
+                exact
+                path="/sessions/proposed"
+                component={ProposedSessions}
+              />
+              <Route exact path="/sessions/:sessionName/" component={Session} />
+              <Route exact path="/session-form" component={SubmitSession} />
+              <Route
+                exact
+                path="/session-update/:id/:editToken"
+                component={UpdateSession}
+              />
+              <Route
+                exact
+                path="/happenings/:happeningName/"
+                component={Happening}
+              />
+              <Route exact path={Humans} />
+              <Route exact path="/news" component={NewsOverview} />
+              <Route exact path="/news/:newsTitle/" component={News} />
+              <Route exact path="/sponsors-drupal" component={Sponsors} />
+              <Route path="*" component={SplatRouter} />
+            </Switch>
+          </div>)}
+      />
+    </Switch>
   </div>);
 
 export default App;

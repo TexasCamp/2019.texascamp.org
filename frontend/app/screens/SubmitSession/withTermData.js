@@ -3,6 +3,17 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import compose from 'recompose/compose';
 
+const TYPE_QUERY = gql`
+  query sessionTypes {
+    taxonomyTermQuery(offset: 0, limit: 999, filter: { vid: "session_type" }) {
+      types: entities {
+        name: entityLabel
+        id: entityId
+      }
+    }
+  }
+`;
+
 const TRACK_QUERY = gql`
   query sessionTracks {
     taxonomyTermQuery(offset: 0, limit: 999, filter: { vid: "track" }) {
@@ -27,6 +38,16 @@ const SKILL_LEVELS_QUERY = gql`
 
 const loadingOptions = [{ id: 0, name: 'Loading...' }];
 
+const withTypes = graphql(TYPE_QUERY, {
+  props: ({
+    data: { taxonomyTermQuery: { types = [] } = {}, loading },
+  }: {
+    data: { taxonomyTermQuery: { types: Array<Object> }, loading: boolean },
+  }): Object => ({
+    types: loading ? loadingOptions : types,
+  }),
+});
+
 const withTracks = graphql(TRACK_QUERY, {
   props: ({
     data: { taxonomyTermQuery: { tracks = [] } = {}, loading },
@@ -50,4 +71,4 @@ const withSkillLevels = graphql(SKILL_LEVELS_QUERY, {
   }),
 });
 
-export default compose(withTracks, withSkillLevels);
+export default compose(withTypes, withTracks, withSkillLevels);
