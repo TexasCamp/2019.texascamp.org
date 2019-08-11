@@ -25,4 +25,8 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_session_presenters: true
+  field_session_room: true
+  field_session_timeslot: true
+  field_session_youtube_link: true
