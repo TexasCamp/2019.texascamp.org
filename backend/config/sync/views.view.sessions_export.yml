@@ -19,6 +19,7 @@ dependencies:
   module:
     - csv_serialization
     - datetime
+    - datetime_range
     - entity_reference_revisions
     - node
     - rest
