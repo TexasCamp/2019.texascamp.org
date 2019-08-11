@@ -37,6 +37,21 @@ export default (() => {
   return (app: express$Application) => {
     const paths: Object = app.get('paths');
 
+    // Redirect non-year urls to this year.
+    app.use((req, res, next) => {
+      if (
+        req.hostname === 'texascamp.org' ||
+        req.hostname === 'www.texascamp.org'
+      ) {
+        return res.redirect(
+          302,
+          `https://2019.texascamp.org${req.originalUrl}`,
+        );
+      }
+
+      return next();
+    });
+
     app.use(compression());
 
     app.use(
