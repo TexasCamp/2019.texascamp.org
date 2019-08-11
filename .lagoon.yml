@@ -23,6 +23,10 @@ environments:
       - varnish:
         - backend2019.texascamp.org
       - frontend:
+        - "texascamp.org":
+            tls-acme: 'false'
+        - "www.texascamp.org":
+            tls-acme: 'false'
         - "2019.texascamp.org":
             tls-acme: 'false'
     cronjobs:
