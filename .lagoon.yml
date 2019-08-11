@@ -23,8 +23,9 @@ environments:
       - varnish:
         - backend2019.texascamp.org
       - frontend:
-        - "2019-not-exists.texascamp.org":
-            tls-acme: 'false'
+        - "2019.texascamp.org":
+            tls-acme: 'true'
+            insecure: Redirect
     cronjobs:
       - name: drush cron
         schedule: "H/15 * * * *"
