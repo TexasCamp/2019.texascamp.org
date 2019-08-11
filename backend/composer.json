@@ -15,7 +15,7 @@
         "drupal/admin_toolbar": "^1.21",
         "drupal/admin_toolbar_tools": "^1.21",
         "drupal/config_installer": "^1.4",
-        "drupal/core": "~8.6.0",
+        "drupal/core": "~8.7.0",
         "drupal/ctools": "^3.0",
         "drupal/graphql": "^3.0",
         "drupal/paragraphs": "^1.2",
