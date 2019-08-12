@@ -66,6 +66,14 @@ const SubmitSession = ({
                     those who have gone before.
                   </a>
                 </p>
+                <ul>
+                  <li>
+                    <a href="/submit-session">Session guidelines</a>
+                  </li>
+                  <li>
+                    <a href="/submit-training">Training guidelines</a>
+                  </li>
+                </ul>
                 <SessionForm
                   types={types}
                   tracks={tracks}
