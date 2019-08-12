@@ -36,7 +36,9 @@ const SubmitSession = ({
         <Header />
         <div className={styles.content}>
           <div className={styles.contentContainer}>
-            <h1 className={styles.title}>Submit a session</h1>
+            <h1 className={styles.title}>
+              Submit a Session, Panel, Lightning Talk, or Training!
+            </h1>
             {submitted &&
               <div>
                 <p className={styles.confirmationText}>
@@ -57,14 +59,21 @@ const SubmitSession = ({
             {!submitted &&
               <div>
                 <p className={styles.introText}>
-                  Now’s your chance! All you need is a big idea and enough
-                  content to fill 45 minutes.
+                  Now’s your chance! All you need is a big idea and content.
                   <br />
                   Be brave, be bold. Join the ranks of{' '}
                   <a href="https://www.youtube.com/channel/UCzgPOXiGFFAHJSSDunsVNJg/playlists">
                     those who have gone before.
                   </a>
                 </p>
+                <ul>
+                  <li>
+                    <a href="/submit-session">Session guidelines</a>
+                  </li>
+                  <li>
+                    <a href="/submit-training">Training guidelines</a>
+                  </li>
+                </ul>
                 <SessionForm
                   types={types}
                   tracks={tracks}
