@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Session Type'
 vid: session_type
 description: 'Session, Training, Panel, or Lightning talk'
-hierarchy: 0
 weight: 0
