@@ -70,7 +70,7 @@ const Sponsors = ({
                   <li>
                     <p>
                       Join our{' '}
-                      <a href="https://opencollective.com/drupalatx">
+                      <a href="https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets">
                         Open Collective
                       </a>{' '}
                       to submit funds
