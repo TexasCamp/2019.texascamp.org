@@ -95,6 +95,11 @@ body {
     }
   }
 }
+#app {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
 .title {
   font-size: 30px;
   line-height: 40px;

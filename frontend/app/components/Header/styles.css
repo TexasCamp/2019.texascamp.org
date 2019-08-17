@@ -93,6 +93,12 @@
       padding-top: 8px;
     }
   }
+  .venue {
+    a:hover {
+      border-bottom: 1px solid;
+      padding-top: 8px;
+    }
+  }
 }
 .logo {
   position: relative;
@@ -225,7 +231,7 @@
 :global .home {
   .snake {
     @media screen and (max-width: 500px) {
-      left: 50%;
+      left: 0;
       overflow: visible !important;
       position: absolute;
     }
@@ -235,11 +241,11 @@
     img {
       @media screen and (max-width: 500px) {
         background-color: $orange;
-        left: -50%;
+        left: 0;
         position: relative;
       }
       @media $tabletDown {
-        max-width: 500px !important;
+        max-width: 100vw !important;
         padding-top: 156px;
       }
       @media $tabletOnly {

@@ -11,7 +11,7 @@
 }
 .info {
   color: $grey;
-  margin: 20px 0 40px;
+  margin: 20px 0 20px;
   .social {
     img {
       height: 14px;
@@ -32,14 +32,16 @@
 .heading {
   width: 140px;
 }
-.sponsorsContainer {
-  display: flex;
-  justify-content: center;
-  img {
-    filter: grayscale(100%) brightness(240%);
-    -webkit-filter: grayscale(100%) brightness(240%);
-    margin: 20px 10px;
-    max-width: 160px;
+.sponsors {
+  .sponsorsContainer {
+    display: flex;
+    justify-content: center;
+    img {
+      filter: grayscale(100%) brightness(240%);
+      -webkit-filter: grayscale(100%) brightness(240%);
+      margin: 20px 0;
+      max-width: 160px;
+    }
   }
 }
 .credits {
@@ -47,8 +49,15 @@
   color: $blue;
   font-size: 10px;
   padding: 20px;
+  padding-top: 0;
+  margin-top: -1em;
   text-align: center;
   a {
     color: $blue;
+  }
+}
+.venue {
+  img {
+    width: 160px;
   }
 }
