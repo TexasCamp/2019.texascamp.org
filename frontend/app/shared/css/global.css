@@ -24,6 +24,10 @@ body {
       }
     }
   }
+  strong {
+    font-weight: normal;
+    font-family: "calder-dark", sans-serif;
+  }
   em {
     font-style: normal;
   }
