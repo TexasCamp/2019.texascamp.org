@@ -5,6 +5,7 @@ import Sponsor from 'Sponsor';
 import withSponsorsQuery from 'Sponsors/withSponsorsQuery';
 import styles from './styles.css';
 import logo from '../../shared/images/texas-camp-logo-blue.png';
+import logoCodeup from '../../shared/images/logo-codeup.png';
 import twitter from '../../shared/images/twitter-grey.png';
 import facebook from '../../shared/images/facebook-grey.png';
 import sponsorsHeading from '../../shared/images/sponsors-heading-grey.png';
@@ -20,7 +21,6 @@ const Footer = ({ loading, sponsors }): React.Element<any> | null =>
             &nbsp;&nbsp;&middot;&nbsp;&nbsp;
           </span>San Antonio, TX
         </div>
-        <div className={styles.venue}>CodeUp</div>
         <div className={styles.socialWrapper}>
           <span className={styles.social}>
             <Twitter />
@@ -31,6 +31,9 @@ const Footer = ({ loading, sponsors }): React.Element<any> | null =>
           <span className={styles.social}>
             <Facebook />
           </span>
+        </div>
+        <div className={styles.venue}>
+          <LogoCodeup />
         </div>
       </div>
       <div className={styles.sponsors}>
@@ -84,6 +87,19 @@ function Facebook() {
       rel="noopener noreferrer"
     >
       <img src={facebook} alt="facebook" />
+    </a>
+  );
+}
+
+function LogoCodeup() {
+  return (
+    <a
+      className={styles.venueLink}
+      href="https://codeup.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src={logoCodeup} alt="venue" />
     </a>
   );
 }
