@@ -14,9 +14,12 @@ const SessionIndividual = ({ session }: { session: SessionT }) => {
   const formattedTimeslotDate = session.timeslot.start
     ? formatSessionDate(session.timeslot.start)
     : '';
-  const formattedTimeslotTime = `${formatTime(
-    session.timeslot.start,
-  )}-${formatTime(session.timeslot.end)}`;
+  const formattedTimeslotTime =
+    session.timeslot.start && session.timeslot.end
+      ? `${formatTime(session.timeslot.start)}-${formatTime(
+          session.timeslot.end,
+        )}`
+      : '';
 
   // Format body to:
   // - Update inline image src to include full url
@@ -77,7 +80,7 @@ const SessionIndividual = ({ session }: { session: SessionT }) => {
                         {session.skillLevel}
                       </div>
                     </div>}
-                  {session.timeslot &&
+                  {(formattedTimeslotDate || formattedTimeslotTime) &&
                     <div className={styles.field}>
                       <div className={styles.fieldLabel}>Timeslot</div>
                       <div>
