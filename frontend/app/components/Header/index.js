@@ -58,7 +58,16 @@ const Header = ({ image = 'snake', isHome }) => {
               &nbsp;&nbsp;&middot;&nbsp;&nbsp;
             </span>San Antonio, TX
           </div>
-          <div className={styles.venue}>CodeUp</div>
+          <div className={styles.venue}>
+            <a
+              className={styles.venueLink}
+              href="https://codeup.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Codeup
+            </a>
+          </div>
           <div className={styles.socialWrapper}>
             <span className={styles.social}>
               <Twitter />

@@ -26,6 +26,7 @@ body {
   }
   strong {
     font-weight: normal;
+    font-family: "calder-dark", sans-serif;
   }
   em {
     font-style: normal;
@@ -93,6 +94,11 @@ body {
       }
     }
   }
+}
+#app {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
 }
 .title {
   font-size: 30px;
