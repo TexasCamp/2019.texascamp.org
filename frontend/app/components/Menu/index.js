@@ -44,7 +44,7 @@ const Menu = ({ isActive, toggleOverlay, menuItems }: MenuPropsT) => {
                 </li>),
               )}
               <li className={styles.menuItemSmall}>
-                <Link to={'code-conduct'} onClick={toggleOverlay}>
+                <Link to={'/code-conduct'} onClick={toggleOverlay}>
                   Code of Conduct
                 </Link>
               </li>
