@@ -170,7 +170,10 @@ const withSubmitForm = withHandlers({
       .catch(err => {
         console.log(err);
         setSubmissionFailed(
-          'There was an error updating your session. Please try again.',
+          <p id="error">
+            There was an error submitting your session. Please try again, or{' '}
+            <a href="mailto:hello@texascamp.org">email us</a>.
+          </p>,
         );
       });
   },
