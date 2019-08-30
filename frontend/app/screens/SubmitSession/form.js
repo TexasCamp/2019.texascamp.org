@@ -210,7 +210,7 @@ const SessionForm = ({
       <div className={styles.submissionContainer}>
         <input
           type="submit"
-          value="Submit"
+          value={saving ? 'Please wait...' : 'Submit'}
           disabled={saving}
           className={styles.button}
         />
