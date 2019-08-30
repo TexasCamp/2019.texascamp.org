@@ -33,7 +33,11 @@ const addGetRequests = networkInterface => {
       .reduce(
         (carry, current) => [
           ...carry,
-          [`${current}=${JSON.stringify(printedRequest[current])}`],
+          [
+            `${current}=${encodeURIComponent(
+              JSON.stringify(printedRequest[current]),
+            )}`,
+          ],
         ],
         [],
       )
@@ -62,7 +66,7 @@ const addGetRequests = networkInterface => {
       .reduce(
         (carry, current, index) => [
           ...carry,
-          [`${index}=${JSON.stringify(current)}`],
+          [`${index}=${encodeURIComponent(JSON.stringify(current))}`],
         ],
         [],
       )
