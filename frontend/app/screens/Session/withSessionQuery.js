@@ -11,7 +11,7 @@ const withSessionQuery = graphql(SESSION_QUERY, {
     } = props;
 
     const session = loading
-      ? []
+      ? null
       : sessionsListMapper(entities).find(
           ({ urlString }) => urlString === sessionName,
         );
