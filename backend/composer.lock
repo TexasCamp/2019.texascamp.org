@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39f84e21f91596541be23d1b2c61422d",
+    "content-hash": "df67ebbb61925ae79eb17974d2717feb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1698,6 +1698,9 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
+                },
+                "patches_applied": {
+                    "Always add Vary: Origin header": "https://www.drupal.org/files/issues/2019-05-02/3001809-always-vary-by-origin-26.patch"
                 }
             },
             "autoload": {

@@ -66,6 +66,11 @@
         ]
     },
     "extra": {
+        "patches": {
+            "drupal/core": {
+                "Always add Vary: Origin header": "https://www.drupal.org/files/issues/2019-05-02/3001809-always-vary-by-origin-26.patch"
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
