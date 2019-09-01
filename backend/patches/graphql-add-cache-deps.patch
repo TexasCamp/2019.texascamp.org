@@ -1,0 +1,66 @@
+diff --git a/modules/graphql_core/src/Plugin/GraphQL/Fields/Menu/MenuByName.php b/modules/graphql_core/src/Plugin/GraphQL/Fields/Menu/MenuByName.php
+index 21f1c00..7158b4c 100644
+--- a/modules/graphql_core/src/Plugin/GraphQL/Fields/Menu/MenuByName.php
++++ b/modules/graphql_core/src/Plugin/GraphQL/Fields/Menu/MenuByName.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\graphql_core\Plugin\GraphQL\Fields\Menu;
+ 
++use Drupal\Core\Cache\CacheableMetadata;
+ use Drupal\Core\DependencyInjection\DependencySerializationTrait;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+@@ -49,6 +50,20 @@ class MenuByName extends FieldPluginBase implements ContainerFactoryPluginInterf
+     parent::__construct($configuration, $pluginId, $pluginDefinition);
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  protected function getCacheDependencies($results, $value, array $args) {
++    $metadata = new CacheableMetadata();
++
++    foreach ($results as $result) {
++      $metadata->addCacheTags($result->getCacheTags());
++      $metadata->addCacheContexts($result->getCacheContexts());
++    }
++
++    return [$metadata];
++  }
++
+   /**
+    * {@inheritdoc}
+    */
+diff --git a/modules/graphql_core/src/Plugin/GraphQL/Fields/Routing/RouteEntity.php b/modules/graphql_core/src/Plugin/GraphQL/Fields/Routing/RouteEntity.php
+index 272ecd5..8646273 100644
+--- a/modules/graphql_core/src/Plugin/GraphQL/Fields/Routing/RouteEntity.php
++++ b/modules/graphql_core/src/Plugin/GraphQL/Fields/Routing/RouteEntity.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\graphql_core\Plugin\GraphQL\Fields\Routing;
+ 
++use Drupal\Core\Cache\CacheableMetadata;
+ use Drupal\Core\DependencyInjection\DependencySerializationTrait;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
+ use Drupal\Core\Language\Language;
+@@ -72,6 +73,20 @@ class RouteEntity extends FieldPluginBase implements ContainerFactoryPluginInter
+     );
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  protected function getCacheDependencies($results, $value, array $args) {
++    $metadata = new CacheableMetadata();
++
++    foreach ($results as $result) {
++      $metadata->addCacheTags($result->getCacheTags());
++      $metadata->addCacheContexts($result->getCacheContexts());
++    }
++
++    return [$metadata];
++  }
++
+   /**
+    * {@inheritdoc}
+    */
