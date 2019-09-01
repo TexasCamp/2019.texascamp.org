@@ -4,7 +4,6 @@ import {
   ApolloClient,
   IntrospectionFragmentMatcher,
   createNetworkInterface,
-  createBatchingNetworkInterface,
 } from 'apollo-client';
 import { printRequest as doPrintRequest } from 'apollo-client/transport/networkInterface';
 import { getQueryDocumentKey } from 'persistgraphql/lib/src/common';
@@ -30,17 +29,20 @@ const addGetRequests = networkInterface => {
     const delimiter = uri.indexOf('?') === -1 ? '?' : '&';
     const printedRequest = printRequest(request);
     const query = Object.keys(printedRequest)
-      .reduce(
-        (carry, current) => [
+      .reduce((carry, current) => {
+        if (!printedRequest[current]) {
+          return carry;
+        }
+
+        return [
           ...carry,
           [
             `${current}=${encodeURIComponent(
               JSON.stringify(printedRequest[current]),
             )}`,
           ],
-        ],
-        [],
-      )
+        ];
+      }, [])
       .join('&');
 
     return global.fetch(`${uri}${delimiter}${query}`, {
@@ -133,15 +135,9 @@ const configureApolloClient = (
   // Use xdebug in development.
   const requestUri = `${apiUri}?XDEBUG_SESSION_START=PHPSTORM`;
 
-  // Use batched queries in production.
-  const networkInterface = isProduction
-    ? createBatchingNetworkInterface({
-      uri: requestUri,
-      batchInterval: 100,
-    })
-    : createNetworkInterface({
-      uri: requestUri,
-    });
+  const networkInterface = createNetworkInterface({
+    uri: requestUri,
+  });
 
   // Use persisted queries and GET requests in production.
   const finalNetworkInterface =
