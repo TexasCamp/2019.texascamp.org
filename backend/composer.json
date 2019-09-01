@@ -69,6 +69,9 @@
         "patches": {
             "drupal/core": {
                 "Always add Vary: Origin header": "https://www.drupal.org/files/issues/2019-05-02/3001809-always-vary-by-origin-26.patch"
+            },
+            "drupal/graphql": {
+                "Add cache dependencies for route/menuByName fields": "patches/graphql-add-cache-deps.patch"
             }
         },
         "installer-paths": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df67ebbb61925ae79eb17974d2717feb",
+    "content-hash": "a4487d91ebd4d45947c4f174f3092b4f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1951,6 +1951,9 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Add cache dependencies for route/menuByName fields": "patches/graphql-add-cache-deps.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1963,6 +1966,10 @@
                     "homepage": "https://www.drupal.org/user/761344"
                 },
                 {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                },
+                {
                     "name": "pmelab",
                     "homepage": "https://www.drupal.org/user/555322"
                 }
@@ -1970,7 +1977,7 @@
             "description": "Exposes your Drupal data model through a GraphQL schema.",
             "homepage": "http://drupal.org/project/graphql",
             "support": {
-                "source": "http://cgit.drupalcode.org/graphql"
+                "source": "https://git.drupalcode.org/project/graphql"
             }
         },
         {
