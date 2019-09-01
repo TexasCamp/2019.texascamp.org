@@ -12,11 +12,17 @@ channels:
       - 2
       - 3
   -
+    id: purger_varnishbundled_74edf6b3e0
+    grants:
+      - 0
+      - 2
+      - 3
+  -
     id: diagnostics
     grants:
       - 3
   -
-    id: purger_varnishbundled_74edf6b3e0
+    id: purger_varnishbundled_1c22517540
     grants:
       - 0
       - 2
