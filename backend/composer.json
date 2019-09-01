@@ -20,7 +20,9 @@
         "drupal/graphql": "^3.0",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.0",
+        "drupal/purge": "^3.0@beta",
         "drupal/token": "^1.1",
+        "drupal/varnish_purge": "^1.11",
         "drupal/views_data_export": "^1.0",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "~1.0",
@@ -64,6 +66,14 @@
         ]
     },
     "extra": {
+        "patches": {
+            "drupal/core": {
+                "Always add Vary: Origin header": "https://www.drupal.org/files/issues/2019-05-02/3001809-always-vary-by-origin-26.patch"
+            },
+            "drupal/graphql": {
+                "Add cache dependencies for route/menuByName fields": "patches/graphql-add-cache-deps.patch"
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
