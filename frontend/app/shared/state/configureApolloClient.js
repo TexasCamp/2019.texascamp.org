@@ -133,7 +133,9 @@ const configureApolloClient = (
   const hasApiVersion = !!apiVersion;
 
   // Use xdebug in development.
-  const requestUri = `${apiUri}?XDEBUG_SESSION_START=PHPSTORM`;
+  const requestUri = isProduction
+    ? apiUri
+    : `${apiUri}?XDEBUG_SESSION_START=PHPSTORM`;
 
   const networkInterface = createNetworkInterface({
     uri: requestUri,
