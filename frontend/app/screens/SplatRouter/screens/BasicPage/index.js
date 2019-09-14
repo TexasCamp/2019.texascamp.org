@@ -35,8 +35,8 @@ const BasicPage = ({ title, body }: BasicPageProps): React.Element<any> => {
     case 'Program':
       backgroundImage = 'camper';
       break;
-    case 'Visiting Austin':
-      backgroundImage = 'watertower';
+    case 'Visiting San Antonio':
+      backgroundImage = 'alamo';
       break;
     default:
       backgroundImage = 'snake';
