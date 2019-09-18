@@ -64,7 +64,7 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
               <div className={`${styles.tickets} ${styles.box}`}>
                 <div className={styles.smallest}>- Admission -</div>
                 <h3>Tickets</h3>
-                <img src={price} alt="$50 USD" />
+                <img src={price} alt="$75 USD" />
                 <a
                   href="https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets"
                   target="_blank"
