@@ -13,7 +13,7 @@ import withNewsQuery from 'NewsOverview/withNewsQuery';
 import SponsorsSlideshow from 'SponsorsSlideshow';
 import withSponsorsQuery from 'Sponsors/withSponsorsQuery';
 import styles from 'Home/styles.css';
-import price from '../../shared/images/price.png';
+import price from '../../shared/images/regular-price.png';
 import sponsorsHeading from '../../shared/images/sponsors-heading.png';
 
 const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
@@ -62,7 +62,7 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
           <div className={styles.detail}>
             <div className={styles.column}>
               <div className={`${styles.tickets} ${styles.box}`}>
-                <div className={styles.smallest}>- Early Nerd -</div>
+                <div className={styles.smallest}>- Admission -</div>
                 <h3>Tickets</h3>
                 <img src={price} alt="$50 USD" />
                 <a
@@ -73,7 +73,7 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
                 >
                   Register
                 </a>
-                <div className={styles.verticalText}>Regularly $75</div>
+                <div className={styles.verticalText}>Community $35</div>
               </div>
               <MediaQuery query="(max-width: 667px)">
                 <div className={styles.latestNews}>
