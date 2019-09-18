@@ -104,20 +104,24 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
                 </div>
               </MediaQuery>
               <div className={`${styles.speak} ${styles.box}`}>
-                <h4>Speak</h4>
-                <p>Gain experience and open source your expertise.</p>
-                <Link to="/submit-session" className={styles.button}>
-                  Submit Session
+                <h4>Sessions</h4>
+                <p>
+                  {"Gain experience and learn from our speaker's expertise."}
+                </p>
+                <Link to="/sessions/proposed" className={styles.button}>
+                  View Sessions
                 </Link>
               </div>
               <div className={`${styles.training} ${styles.box}`}>
-                <h4>Training</h4>
-                <p>
-                  Help your fellow web wranglers to level up by giving a
-                  training.
-                </p>
-                <a href="/submit-training" className={styles.button}>
-                  Submit Training
+                <h4>Training / $75</h4>
+                <p>Learn from the best Drupalers this side of the Pecos.</p>
+                <a
+                  href="https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.button}
+                >
+                  Sign Up
                 </a>
               </div>
               <MediaQuery query="(max-width: 667px)">
