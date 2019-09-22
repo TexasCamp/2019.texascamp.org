@@ -6,7 +6,7 @@
 }
 .content {
   composes: contentWrapper from '../../shared/css/global.css';
-  @media screen and (max-width: 500px) { 
+  @media screen and (max-width: 500px) {
     margin-top: 342px;
   }
   @media $desktop {
@@ -99,7 +99,7 @@
   }
 }
 .sponsors {
-  background: $beige;
+  background: $navy;
   overflow: hidden;
   text-align: center;
   .heading {
@@ -130,7 +130,7 @@
           img {
             margin: 0;
             max-width: 300px;
-            vertical-align: middle;                
+            vertical-align: middle;
           }
         }
       }

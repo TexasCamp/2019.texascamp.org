@@ -1,3 +1,6 @@
 .noImage {
   background: none !important;
 }
+.platinum {
+  background-color: $navy !important;
+}
