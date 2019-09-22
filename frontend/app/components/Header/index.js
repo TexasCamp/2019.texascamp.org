@@ -12,6 +12,8 @@ import camper from '../../shared/images/header/truck.png';
 import camperMobile from '../../shared/images/header/truck-mobile.png';
 import watertower from '../../shared/images/header/water-tower.png';
 import watertowerMobile from '../../shared/images/header/water-tower-mobile.png';
+import alamo from '../../shared/images/header/alamo.png';
+import alamoMobile from '../../shared/images/header/alamo-mobile.png';
 import sponsors from '../../shared/images/header/sponsors.gif';
 import sponsorsMobile from '../../shared/images/header/sponsors.png';
 
@@ -34,6 +36,10 @@ const Header = ({ image = 'snake', isHome }) => {
     case 'watertower':
       backgroundImage = watertower;
       mobileBackgroundImage = watertowerMobile;
+      break;
+    case 'alamo':
+      backgroundImage = alamo;
+      mobileBackgroundImage = alamoMobile;
       break;
     default:
       backgroundImage = snake;
