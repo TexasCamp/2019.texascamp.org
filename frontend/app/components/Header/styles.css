@@ -211,6 +211,32 @@
     }
   }
 }
+:global .alamo {
+  @media $desktop {
+    margin-top: 245px !important;
+  }
+
+  @media $wide {
+    margin-top: 275px !important;
+  }
+
+  img {
+    @media $tabletDown {
+      margin-top: -20vw;
+      max-width: 100%;
+      transform: scale(1.05);
+    }
+
+    @media $tabletOnly {
+      margin-top: -84px;
+      max-width: 540px !important;
+    }
+
+    @media $wide {
+      width: 800px !important;
+    }
+  }
+}
 
 :global .snake {
   img {
