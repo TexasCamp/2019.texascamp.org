@@ -213,22 +213,22 @@
 }
 :global .alamo {
   @media $desktop {
-    margin-top: 265px !important;
+    margin-top: 245px !important;
   }
 
   @media $wide {
-    margin-top: 225px !important;
+    margin-top: 275px !important;
   }
 
   img {
     @media $tabletDown {
-      margin-top: -100px;
+      margin-top: -20vw;
       max-width: 100%;
       transform: scale(1.05);
     }
 
     @media $tabletOnly {
-      margin-top: -164px;
+      margin-top: -84px;
       max-width: 540px !important;
     }
 
