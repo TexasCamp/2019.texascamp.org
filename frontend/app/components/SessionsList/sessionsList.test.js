@@ -19,7 +19,7 @@ const sessions = [
     speakers: ['Brandon Williams', 'Chris Martin'],
     speakersBio:
       '<p>Brandon does web stuff.</p>\n\n<p>Chris also does web stuff.</p>',
-    timeslot: '2018-05-31T14:30:00.000Z',
+    timeslot: '2019-10-19T14:30:00.000Z',
     track: 'Coding and Development',
     title: 'How to build a DrupalCamp website without Drupal',
     urlString: 'how-to-build-a-drupalcamp-website-without-drupal',

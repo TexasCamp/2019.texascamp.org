@@ -7,7 +7,9 @@ import styles from './styles.css';
 type SponsorPropsT = {
   sponsor: SponsorT,
 };
-const Sponsor = ({ sponsor: { title, image, sponsorUrl } }: SponsorPropsT) => {
+const Sponsor = ({
+  sponsor: { title, image, sponsorUrl, sponsorLevel },
+}: SponsorPropsT) => {
   const noLogoAvailable = !image.url;
   const SponsorWithTitleOnly = (
     <p>
@@ -21,7 +23,13 @@ const Sponsor = ({ sponsor: { title, image, sponsorUrl } }: SponsorPropsT) => {
   // if image is not included, render title only.
   let SponsorEntity = noLogoAvailable ? SponsorWithTitleOnly : SponsorWithLogo;
   // if sponsor has url, wrap with link
-  if (sponsorUrl) {
+  if (sponsorUrl && sponsorLevel === 'Platinum') {
+    SponsorEntity = (
+      <a href={sponsorUrl} className={styles.platinum}>
+        {SponsorEntity}
+      </a>
+    );
+  } else if (sponsorUrl) {
     SponsorEntity = (
       <a href={sponsorUrl}>
         {SponsorEntity}

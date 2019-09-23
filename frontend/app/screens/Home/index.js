@@ -14,7 +14,7 @@ import SponsorsSlideshow from 'SponsorsSlideshow';
 import withSponsorsQuery from 'Sponsors/withSponsorsQuery';
 import styles from 'Home/styles.css';
 import price from '../../shared/images/regular-price.png';
-import sponsorsHeading from '../../shared/images/sponsors-heading.png';
+import sponsorsHeading from '../../shared/images/sponsors-heading-grey.png';
 
 const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
   const latestNews = newsList
@@ -75,34 +75,6 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
                 </a>
                 <div className={styles.verticalText}>Community $35</div>
               </div>
-              <MediaQuery query="(max-width: 667px)">
-                <div className={styles.latestNews}>
-                  {latestNews}
-                </div>
-              </MediaQuery>
-              <div className={`${styles.sponsors} ${styles.box}`}>
-                <img
-                  src={sponsorsHeading}
-                  alt="Platinum Sponsors"
-                  className={styles.heading}
-                />
-                <SponsorsSlideshow sponsors={sponsors} />
-                <Link to="/sponsors" className={styles.button}>
-                  Sponsor
-                </Link>
-              </div>
-              <MediaQuery query="(min-width: 668px)">
-                <div className={styles.newsList}>
-                  {oddNewsList}
-                </div>
-              </MediaQuery>
-            </div>
-            <div className={styles.column}>
-              <MediaQuery query="(min-width: 668px)">
-                <div className={styles.latestNews}>
-                  {latestNews}
-                </div>
-              </MediaQuery>
               <div className={`${styles.speak} ${styles.box}`}>
                 <h4>Sessions</h4>
                 <p>
@@ -123,6 +95,34 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
                 >
                   Sign Up
                 </a>
+              </div>
+              <MediaQuery query="(max-width: 667px)">
+                <div className={styles.latestNews}>
+                  {latestNews}
+                </div>
+              </MediaQuery>
+              <MediaQuery query="(min-width: 668px)">
+                <div className={styles.newsList}>
+                  {oddNewsList}
+                </div>
+              </MediaQuery>
+            </div>
+            <div className={styles.column}>
+              <MediaQuery query="(min-width: 668px)">
+                <div className={styles.latestNews}>
+                  {latestNews}
+                </div>
+              </MediaQuery>
+              <div className={`${styles.sponsors} ${styles.box}`}>
+                <img
+                  src={sponsorsHeading}
+                  alt="Platinum Sponsors"
+                  className={styles.heading}
+                />
+                <SponsorsSlideshow sponsors={sponsors} />
+                <Link to="/sponsors" className={styles.button}>
+                  Sponsor
+                </Link>
               </div>
               <MediaQuery query="(max-width: 667px)">
                 <div>

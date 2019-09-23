@@ -6,10 +6,10 @@ import mapProps from 'recompose/mapProps';
 import { formatTime } from 'utils';
 
 let defaultStartDate = moment.utc();
-const startDate = moment('2018-05-31').startOf('day').utcOffset(-5);
-const endDate = moment('2018-06-02').endOf('day').utcOffset(-5);
+const startDate = moment('2019-10-18').startOf('day').utcOffset(-5);
+const endDate = moment('2019-10-19').endOf('day').utcOffset(-5);
 if (!moment.utc().utcOffset(-5).isBetween(startDate, endDate)) {
-  defaultStartDate = moment('2018-06-01');
+  defaultStartDate = moment('2019-10-19');
 }
 
 const withLogic = compose(
