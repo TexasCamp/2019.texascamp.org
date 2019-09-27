@@ -9,6 +9,7 @@ module.exports = {
   rules: {
     curly: [2, 'all'], // make braces with if statements mandatory.
     'arrow-body-style': 0, // makes debugging easier
+    'no-fallthrough': 'error', // don't allow fall through on switch statements
     'no-unused-expressions': 0, // allowing ternary function calls makes calling action methods nicer
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'import/no-extraneous-dependencies': 0, // shared error

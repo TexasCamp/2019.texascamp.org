@@ -32,6 +32,9 @@ const BasicPage = ({ title, body }: BasicPageProps): React.Element<any> => {
     case 'Code of Conduct':
       backgroundImage = 'watertower';
       break;
+    case 'Getting Around':
+      backgroundImage = 'alamo';
+      break;
     case 'Program':
       backgroundImage = 'camper';
       break;
