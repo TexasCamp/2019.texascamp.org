@@ -15,6 +15,7 @@ import preloadTree from 'utils/preloadTree';
 import introspectionData from 'introspection.json';
 import logger from 'logger';
 import App from 'App';
+import TagManager from 'react-gtm-module';
 
 const doRender = (
   clientStats: Object,
@@ -111,6 +112,11 @@ const doRenderError = (clientStats: Object) => (
   });
 
   const messages = extractErrorMessages(error);
+  const tagManagerArgs = {
+    gtmId: 'GTM-NFNDVJW',
+  };
+
+  TagManager.initialize(tagManagerArgs);
 
   res.status(505).send(`<!doctype html>
 <html>
