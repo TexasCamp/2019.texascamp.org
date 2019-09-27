@@ -13,6 +13,7 @@ import configureApolloClient from 'state/configureApolloClient';
 import configureClientStore from 'state/configureClientStore';
 import { apiVersion, queryMap } from 'api';
 import introspectionData from 'introspection.json';
+import TagManager from 'react-gtm-module';
 import Root from './root';
 
 /* eslint-disable no-underscore-dangle,no-undef */
@@ -33,6 +34,11 @@ const mountNode = global.document.getElementById('app');
 
 // Encapsulate rendering for hot-reloading.
 const render: Function = (Component): void => {
+  const tagManagerArgs = {
+    gtmId: 'GTM-NFNDVJW',
+  };
+
+  TagManager.initialize(tagManagerArgs);
   ReactDOM.render(
     <Component store={reduxStore} client={apolloClient} />,
     mountNode,
