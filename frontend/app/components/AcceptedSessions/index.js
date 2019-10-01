@@ -107,9 +107,11 @@ const SessionDetails = ({ session }: { session: SessionT }) => {
           </div>}
       </div>
       {session.room &&
-        <div className={styles.room}>
-          {session.room}
-        </div>}
+        <a href="/venue">
+          <div className={styles.room}>
+            {session.room}
+          </div>
+        </a>}
     </div>
   );
 };
