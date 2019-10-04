@@ -93,9 +93,11 @@ const SessionIndividual = ({ session }: { session: SessionT }) => {
                   {session.room &&
                     <div className={styles.field}>
                       <div className={styles.fieldLabel}>Room</div>
-                      <div>
-                        {session.room}
-                      </div>
+                      <a href="/venue">
+                        <div>
+                          {session.room}
+                        </div>
+                      </a>
                     </div>}
                 </div>
                 <div className={styles.mainContent}>
