@@ -55,15 +55,23 @@ const AcceptedSessions = ({
                 {sessionTimeslotGroup[1].map(session => {
                   return (
                     <div key={session.urlString} className={styles.session}>
-                      {session.body !== null
-                        ? <Link
-                          to={`${session.type === 'happening'
-                              ? '/happenings/'
-                              : '/sessions/'}${session.urlString}`}
-                        >
-                          <SessionDetails session={session} />
-                        </Link>
-                        : <SessionDetails session={session} />}
+                      <div className={styles.sessionWrapper}>
+                        {session.body !== null
+                          ? <Link
+                            to={`${session.type === 'happening'
+                                ? '/happenings/'
+                                : '/sessions/'}${session.urlString}`}
+                          >
+                            <SessionDetails session={session} />
+                          </Link>
+                          : <SessionDetails session={session} />}
+                        {session.room &&
+                          <Link to="/venue">
+                            <div className={styles.room}>
+                              {session.room}
+                            </div>
+                          </Link>}
+                      </div>
                     </div>
                   );
                 })}
@@ -78,40 +86,32 @@ const AcceptedSessions = ({
 
 const SessionDetails = ({ session }: { session: SessionT }) => {
   return (
-    <div className={styles.sessionWrapper}>
-      <div className={styles.sessionDetails}>
-        {session.skillLevel &&
-          <div className={styles.skillLevel}>
-            <div className={session.skillLevel}>
-              {session.skillLevel}
-            </div>
-          </div>}
-        <h3 className={styles.sessionTitle}>
-          {session.title}
-        </h3>
-        {session.speakers &&
-          <div className={styles.speakers}>
-            {session.speakers.map(eachSpeaker =>
-              (<span
-                key={eachSpeaker.fieldSessionPresenter}
-                className={styles.presenter}
-              >
-                {eachSpeaker.fieldSessionPresenter}
-              </span>),
-            )}
-            {session.track &&
-              session.track !== 'Keynote' &&
-              <span>
-                <span className={styles.spacer}>|</span> {session.track}
-              </span>}
-          </div>}
-      </div>
-      {session.room &&
-        <a href="/venue">
-          <div className={styles.room}>
-            {session.room}
+    <div className={styles.sessionDetails}>
+      {session.skillLevel &&
+        <div className={styles.skillLevel}>
+          <div className={session.skillLevel}>
+            {session.skillLevel}
           </div>
-        </a>}
+        </div>}
+      <h3 className={styles.sessionTitle}>
+        {session.title}
+      </h3>
+      {session.speakers &&
+        <div className={styles.speakers}>
+          {session.speakers.map(eachSpeaker =>
+            (<span
+              key={eachSpeaker.fieldSessionPresenter}
+              className={styles.presenter}
+            >
+              {eachSpeaker.fieldSessionPresenter}
+            </span>),
+          )}
+          {session.track &&
+            session.track !== 'Keynote' &&
+            <span>
+              <span className={styles.spacer}>|</span> {session.track}
+            </span>}
+        </div>}
     </div>
   );
 };
