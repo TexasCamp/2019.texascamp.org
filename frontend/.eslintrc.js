@@ -1,6 +1,7 @@
 module.exports = {
   env: {
     jest: true,
+    "browser": true,
   },
   extends: ['@amazee/eslint-config-amazee', 'plugin:jsx-a11y/recommended'],
   globals: {
