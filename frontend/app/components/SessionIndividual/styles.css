@@ -55,6 +55,7 @@
       background: $yellow;
       margin-top: 40px;
       padding: 20px;
+      word-break: break-all;
       @media $tablet {
         margin-top: 74px;
         padding: 26px 30px 14px;
