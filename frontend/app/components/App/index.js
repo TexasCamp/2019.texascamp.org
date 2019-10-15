@@ -27,6 +27,20 @@ import logo from 'images/texas-camp-logo-blue.png';
 import styles from './styles.css';
 import '../../shared/css/global.css';
 
+class Scroll extends React.Component {
+  componentDidMount = () => this.handleScroll();
+
+  componentDidUpdate = () => this.handleScroll();
+
+  handleScroll = () => {
+    window.scrollTo(0, 0);
+  };
+
+  render() {
+    return this.props.children;
+  }
+}
+
 const App = (): React.Element<any> =>
   (<div>
     <Helmet
@@ -60,24 +74,30 @@ const App = (): React.Element<any> =>
     </Helmet>
     <Typekit kitId="rgi7wxl" />
     <div className={styles.wrapper}>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/schedule" component={Sessions} />
-        <Route exact path="/sessions/proposed" component={ProposedSessions} />
-        <Route exact path="/sessions/:sessionName/" component={Session} />
-        <Route exact path="/session-form" component={SubmitSession} />
-        <Route
-          exact
-          path="/session-update/:id/:editToken"
-          component={UpdateSession}
-        />
-        <Route exact path="/happenings/:happeningName/" component={Happening} />
-        <Route exact path={Humans} />
-        <Route exact path="/news" component={NewsOverview} />
-        <Route exact path="/news/:newsTitle/" component={News} />
-        <Route exact path="/sponsors" component={Sponsors} />
-        <Route path="*" component={SplatRouter} />
-      </Switch>
+      <Scroll>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/schedule" component={Sessions} />
+          <Route exact path="/sessions/proposed" component={ProposedSessions} />
+          <Route exact path="/sessions/:sessionName/" component={Session} />
+          <Route exact path="/session-form" component={SubmitSession} />
+          <Route
+            exact
+            path="/session-update/:id/:editToken"
+            component={UpdateSession}
+          />
+          <Route
+            exact
+            path="/happenings/:happeningName/"
+            component={Happening}
+          />
+          <Route exact path={Humans} />
+          <Route exact path="/news" component={NewsOverview} />
+          <Route exact path="/news/:newsTitle/" component={News} />
+          <Route exact path="/sponsors" component={Sponsors} />
+          <Route path="*" component={SplatRouter} />
+        </Switch>
+      </Scroll>
     </div>
   </div>);
 
