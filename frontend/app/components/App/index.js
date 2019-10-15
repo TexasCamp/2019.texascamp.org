@@ -23,6 +23,7 @@ import appleTouchIcon from 'favicons/apple-touch-icon.png';
 import favicon32x32 from 'favicons/favicon-32x32.png';
 import favicon16x16 from 'favicons/favicon-16x16.png';
 import safariPinnedTab from 'favicons/safari-pinned-tab.svg';
+import logo from 'images/texas-camp-logo-blue.png';
 import styles from './styles.css';
 import '../../shared/css/global.css';
 
@@ -36,6 +37,21 @@ const App = (): React.Element<any> =>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#ef5a47" />
+      <meta name="description" content="The best Drupal Camp in Texas" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@DrupalTexasCamp" />
+      <meta name="twitter:title" content="Texas Camp" />
+      <meta
+        name="twitter:description"
+        content="The best Drupal Camp in Texas"
+      />
+      <meta name="twitter:image" content={`https://www.texascamp.org${logo}`} />
+      <meta property="og:title" content="Texas Camp" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="www.texascamp.org" />
+      <meta property="og:description" content="The best Drupal Camp in Texas" />
+      <meta property="og:image" content={`https://www.texascamp.org${logo}`} />
+      <meta property="og:url" content="https://www.texascamp.org" />
       <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
       <link rel="icon" type="image/png" sizes="32x32" href={favicon32x32} />
       <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16} />
