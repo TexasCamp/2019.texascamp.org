@@ -59,7 +59,7 @@
     "recompose": "^0.24.0",
     "redux": "^3.7.2",
     "reselect": "^3.0.1",
-    "serialize-javascript": "^1.4.0",
+    "serialize-javascript": "^2.1.1",
     "webpack-flush-chunks": "^2.0.3",
     "winston": "^2.3.1"
   },
