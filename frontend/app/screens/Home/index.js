@@ -66,7 +66,7 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
                 <h3>Tickets</h3>
                 <img src={price} alt="$75 USD" />
                 <a
-                  href="https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets"
+                  href="https://opencollective.com/txdug/events/texas-camp-2019-19178ev#tickets"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.button}
@@ -88,7 +88,7 @@ const Home = ({ loading, newsList, sponsors }): React.Element<any> | null => {
                 <h4>Training / $75</h4>
                 <p>Learn from the best Drupalers this side of the Pecos.</p>
                 <a
-                  href="https://opencollective.com/drupalatx/events/texas-camp-2019-19178ev#tickets"
+                  href="https://opencollective.com/txdug/events/texas-camp-2019-19178ev#tickets"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.button}
